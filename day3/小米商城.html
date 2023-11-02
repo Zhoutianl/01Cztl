@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p:hover {
+            color: orange;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .top {
+            width: 100%;
+            height: 30px;
+            background-color: #333333;
+            color: #ddd;
+            padding: 0 100px;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .topr {
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .topr>p {
+            margin: 0 10px;
+        }
+
+        .topl {
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .topl>p {
+            margin: 0 10px;
+        }
+
+        .topgwc {
+            height: 30px;
+            line-height: 30px;
+            width: 60px;
+            text-align: center;
+            background-color: #424242;
+        }
+
+        .nav {
+            width: 100%;
+            padding: 10px 100px;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            width: 80px;
+            height: 80px;
+        }
+
+        .navc {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 16px;
+        }
+
+        .navc>p {
+            margin: 0 10px;
+        }
+
+        .navr {
+            display: flex;
+            align-items: center;
+        }
+
+        .navr>input {
+            width: 180px;
+            height: 40px;
+            font-size: 16px;
+            padding-left: 10px;
+        }
+
+        .navr>button {
+            width: 40px;
+            height: 40px;
+            border-right: 1px solid #000;
+            border-top: 1px solid #000;
+            border-bottom: 1px solid #000;
+            border-left: none;
+            background-color: #fff;
+            font-size: 16px;
+        }
+
+        h3 {
+            width: 100%;
+            height: 40px;
+            background-color: #f5f5f5;
+            padding: 0 100px;
+            box-sizing: border-box;
+            line-height: 40px;
+        }
+
+        .msg {
+            width: 100%;
+            padding: 0 100px;
+        }
+
+        .msgt {
+            display: flex;
+            align-items: center;
+            margin: 20px;
+        }
+
+        .msgt>h2 {
+            margin-left: 20px;
+            color: orange;
+        }
+
+        .msgt>p {
+            border: 1px solid #ccc;
+            width: 20px;
+            height: 20px;
+            color: #ccc;
+            text-align: center;
+            line-height: 20px;
+            font-size: 16px;
+            border-radius: 50%;
+        }
+
+        .msgb {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .msgb>div {
+            width: 20%;
+            height: 200px;
+            border: 1px solid #ccc;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .msgb>div>img {
+            width: 80px;
+            height: 120px;
+        }
+        .gu{
+            position: fixed;
+            right: 0;
+            bottom: 60px;
+        }
+        .gu>div{
+            width: 80px;
+            height: 100px;
+            border: 1px solid #ddd;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="top">
+            <div class="topr">
+                <p>小米官网</p>
+                <p>小米商城</p>
+                <p>MIUI</p>
+                <p>loT</p>
+                <p>云服务</p>
+                <p>天星数据</p>
+                <p>有品</p>
+                <p>小爱开放平台</p>
+                <p>资质证照</p>
+                <p>协议规则</p>
+                <p>下载app</p>
+                <p>Select Location</p>
+            </div>
+            <div class="topl">
+                <p>登录</p>
+                <p>注册</p>
+                <p>消息通知</p>
+                <p class="topgwc">购物车</p>
+            </div>
+        </div>
+        <div class="nav">
+            <img src="./img/logo.png" alt="" class="logo">
+            <div class="navc">
+                <p>全部商品分类</p>
+                <p>Xiaomi手机</p>
+                <p>Redmi手机</p>
+                <p>电视</p>
+                <p>笔记本</p>
+                <p>平板</p>
+                <p>家电</p>
+                <p>路由器</p>
+                <p>服务中心</p>
+                <p>社区</p>
+            </div>
+            <div class="navr">
+                <input type="text" placeholder="红米">
+                <button>搜</button>
+            </div>
+        </div>
+        <h3 class="mbx">首页 / 全部商品分类</h3>
+        <div class="msg">
+            <div class="msgt">
+                <p>V</p>
+                <h2>手机</h2>
+            </div>
+            <div class="msgb">
+                <div>
+                    <img src="./img/1.png" alt="">
+                    <p>Xiaomi MIX系列</p>
+                </div>
+                <div>
+                    <img src="./img/2.png" alt="">
+                    <p>Xiaomi 数字系列</p>
+                </div>
+                <div>
+                    <img src="./img/3.png" alt="">
+                    <p>Xiaomi Civi系列</p>
+                </div>
+                <div>
+                    <img src="./img/4.png" alt="">
+                    <p>Redmi K系列</p>
+                </div>
+                <div>
+                    <img src="./img/5.png" alt="">
+                    <p>Redmi Note系列</p>
+                </div>
+                <div>
+                    <img src="./img/6.png" alt="">
+                    <p>Redmi 数字系列</p>
+                </div>
+            </div>
+        </div>
+        <div class="gu">
+            <div>
+                <img src="./img/right1.png" alt="">
+                <p>手机APP</p>
+            </div>
+            <div>
+                <img src="./img/right2.png" alt="">
+                <p>个人中心</p>
+            </div>
+            <div>
+                <img src="./img/right3.png" alt="">
+                <p>售后服务</p>
+            </div>
+            <div><img src="./img/right4.png" alt="">
+                <p>人工客服</p>
+            </div>
+            <div>
+                <img src="./img/right5.png" alt="">
+                <p>购物车</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

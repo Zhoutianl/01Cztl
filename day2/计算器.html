@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .box {
+            background-color: black;
+            width: 400px;
+            height: 650px;
+            margin: 20px auto;
+            padding: 10px;
+        }
+
+        .top {
+            width: 100%;
+            height: 100px;
+            margin-bottom: 20px;
+            display: flex;
+        }
+
+        .msg {
+            width: 100%;
+            height: 100%;
+            font-size: 37px;
+            color: #fff;
+            text-align: center;
+            border: none;
+        }
+
+        .bottom {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        li {
+            width: 22%;
+            height: 83.6px;
+            list-style: none;
+            margin-bottom: 12px;
+
+        }
+
+        button {
+            width: 100%;
+            height: 100%;
+            font-size: 26px;
+            border-radius: 50%;
+            color: #fff;
+            border: none;
+        }
+
+        .ff {
+            background-color: #ff9200;
+        }
+
+        .sz {
+            background-color: #333333;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="top">
+            <input type="text" class="msg" disabled="disabled" id="num">
+            <input type="text" class="msg" disabled="disabled" id="num1">
+            <input type="text" class="msg" disabled="disabled" id="num2">
+            <input type="text" class="msg" disabled="disabled" id="num3">
+            <input type="text" class="msg" disabled="disabled" id="num4">
+        </div>
+        <div class="bottom">
+            <li>
+                <button class="ff" onclick="removes()">AC</button>
+            </li>
+            <li>
+                <button class="ff">+/-</button>
+            </li>
+            <li>
+                <button class="ff">%</button>
+            </li>
+            <li>
+                <button class="ff" value="/" onclick="ff('/')">/</button>
+            </li>
+            <li>
+                <button class="sz" value="7" onclick="sz(7)">7</button>
+            </li>
+            <li>
+                <button class="sz" value="8" onclick="sz(8)">8</button>
+            </li>
+            <li>
+                <button class="sz" value="9" onclick="sz(9)">9</button>
+            </li>
+            <li>
+                <button class="ff" value="*" onclick="ff('*')">*</button>
+            </li>
+            <li>
+                <button class="sz" value="4" onclick="sz(4)">4</button>
+            </li>
+            <li>
+                <button class="sz" value="5" onclick="sz(5)">5</button>
+            </li>
+            <li>
+                <button class="sz" value="6" onclick="sz(6)">6</button>
+            </li>
+            <li>
+                <button class="ff" value="-" onclick="ff('-')">-</button>
+            </li>
+            <li>
+                <button class="sz" value="1" onclick="sz(1)">1</button>
+            </li>
+            <li>
+                <button class="sz" value="2" onclick="sz(2)">2</button>
+            </li>
+            <li>
+                <button class="sz" value="3" onclick="sz(3)">3</button>
+            </li>
+            <li>
+                <button class="ff" value="4" onclick="ff('+')">+</button>
+            </li>
+            <li>
+                <button class="sz" value="0" onclick="sz(0)">0</button>
+            </li>
+            <li>
+                <button class="sz">00</button>
+            </li>
+            <li>
+                <button class="sz">.</button>
+            </li>
+            <li>
+                <button class="ff" value="=" onclick="result()">=</button>
+            </li>
+        </div>
+    </div>
+</body>
+
+<script>
+    var flag = true;
+    function ff(s) {
+        var d = document.querySelector("#num1")
+        d.value = s
+        flag = false
+    }
+    function sz(num) {
+        if (flag) {
+            var numone = document.querySelector("#num")
+            numone.value += num
+        } else {
+            var numtwo = document.querySelector("#num2")
+            numtwo.value += num
+        }
+    }
+    function result() {
+        var deng = document.querySelector("#num3")
+        deng.value = "="
+        var num1 = parseInt(document.querySelector("#num").value)
+        var num2 = parseInt(document.querySelector("#num2").value)
+        var key = document.querySelector("#num1").value
+        // console.log(key);
+        // console.log(num1+num2);
+        switch (key) {
+            case '+':
+                var sum = document.querySelector("#num4")
+                sum.value = (num1 + num2)
+                break;
+            case '-':
+                var sum=document.querySelector("#num4")
+                sum.value=(num1-num2)
+                break;
+            case '*':
+                var sum=document.querySelector("#num4")
+                sum.value=(num1*num2)
+                break;
+            case '/':
+                var sum=document.querySelector("#num4")
+                sum.value=(num1/num2)
+                break;
+        }
+    }
+    function removes(){
+        document.querySelector("#num").value="";
+        document.querySelector("#num1").value="";
+        document.querySelector("#num2").value="";
+        document.querySelector("#num3").value="";
+        document.querySelector("#num4").value="";
+        flag=true
+    }
+</script>
+
+</html>

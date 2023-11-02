@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var arr1 = ["1", "2", "3", "4"]
+        var arr2 = ["春", "夏", "秋", "冬"]
+
+        // let iterator=arr2[Symbol.iterator]()
+
+        // console.log(iterator,'iterator');
+        // console.log(iterator.next());
+        // console.log(iterator.next());
+        // console.log(iterator.next());
+        // console.log(iterator.next());
+        // console.log(iterator.next());
+
+
+        function * fun() {
+            yield '我是一个大帅比'
+            yield '我真的太帅了'
+            yield '没有人比我更帅了'
+        }
+
+        let iterator = fun()
+
+        console.log(iterator.next());
+        console.log(iterator.next());
+        console.log(iterator.next());
+        console.log(iterator.next());
+
+    </script>
+</body>
+
+</html>

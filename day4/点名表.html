@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .box {
+            width: 100vw;
+            height: 100vh;
+            background: linear-gradient(45deg, red, #fff, rebeccapurple);
+            padding: 20px;
+        }
+
+        h1 {
+            width: 300px;
+            font-size: 28px;
+            background-image: -webkit-linear-gradient(left, yellow, red, orange);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .msg {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .left {
+            width: 50%;
+            margin-top: 200px;
+            font-size: 26px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .left>span {
+            margin: 10px;
+            background-image: -webkit-linear-gradient(45deg, rgb(0, 238, 255), rgb(195, 0, 255), rgb(0, 255, 85));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .right {
+            color: red;
+            width: 40%;
+            margin-top: 200px;
+            font-size: 26px;
+        }
+
+        .right>h2>span {
+            color: rgb(115, 255, 0);
+        }
+
+        .right>button {
+            width: 150px;
+            height: 40px;
+            border: none;
+            font-size: 26px;
+            color: rgb(255, 255, 255);
+            background-color: orange;
+            border-radius: 10px;
+            margin: 20px 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <h1>全栈2301C随机点名表</h1>
+        <div class="msg">
+            <div class="left">
+
+            </div>
+            <div class="right">
+                <h2>天选之子: <span class="one"></span> <span class="two"></span></h2>
+                <button onclick="ones()">单人点名</button><button onclick="twos()">双人点名</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let list = [
+            {
+                name: "蔡徐坤",
+                xb: "男"
+            },
+            {
+                name: "吴亦凡",
+                xb: "男"
+            },
+            {
+                name: "李易峰",
+                xb: "男"
+            },
+            {
+                name: "张艺兴",
+                xb: "男"
+            },
+            {
+                name: "张靓颖",
+                xb: "女"
+            },
+            {
+                name: "章若楠",
+                xb: "女"
+            },
+            {
+                name: "鞠婧祎",
+                xb: "女"
+            },
+            {
+                name: "刘德华",
+                xb: "男"
+            },
+            {
+                name: "薛之谦",
+                xb: "男"
+            },
+            {
+                name: "周杰伦",
+                xb: "男"
+            },
+            {
+                name: "王靖雯",
+                xb: "女"
+            },
+            {
+                name: "刘亦菲",
+                xb: "女"
+            },
+            {
+                name: "王一博",
+                xb: "男"
+            },
+            {
+                name: "权志龙",
+                xb: "男"
+            },
+            {
+                name: "范丞丞",
+                xb: "男"
+            },
+            {
+                name: "陈立农",
+                xb: "男"
+            },
+            {
+                name: "骆付增",
+                xb: "男"
+            },
+            {
+                name: "刘晓博",
+                xb: "男"
+            },
+            {
+                name: "闫锦豪",
+                xb: "男"
+            },
+            {
+                name: "娄艺潇",
+                xb: "女"
+            },
+            {
+                name: "李金铭",
+                xb: "女"
+            },
+            {
+                name: "张柏芝",
+                xb: "女"
+            },
+            {
+                name: "郭富城",
+                xb: "男"
+            },
+            {
+                name: "庄心妍",
+                xb: "女"
+            },
+            {
+                name: "彭于晏",
+                xb: "男"
+            },
+            {
+                name: "张学友",
+                xb: "男"
+            },
+            {
+                name: "陈奕迅",
+                xb: "男"
+            },
+            {
+                name: "林俊杰",
+                xb: "男"
+            },
+            {
+                name: "雷佳音",
+                xb: "男"
+            },
+            {
+                name: "高启强",
+                xb: "男"
+            },
+            {
+                name: "高启盛",
+                xb: "男"
+            },
+            {
+                name: "张惠妹",
+                xb: "女"
+            },
+            {
+                name: "徐佳莹",
+                xb: "女"
+            },
+            {
+                name: "王宝强",
+                xb: "男"
+            },
+            {
+                name: "张红雷",
+                xb: "男"
+            },
+            {
+                name: "陈慧娴",
+                xb: "女"
+            },
+            {
+                name: "张碧晨",
+                xb: "女"
+            },
+            {
+                name: "林更新",
+                xb: "男"
+            },
+            {
+                name: "黄子韬",
+                xb: "男"
+            },
+            {
+                name: "包贝尔",
+                xb: "男"
+            },
+            {
+                name: "萧敬腾",
+                xb: "男"
+            },
+            {
+                name: "郑润泽",
+                xb: "男"
+            },
+        ]
+        var left = document.querySelector('.left')
+        for (var i = 0; i < list.length; i++) {
+            left.innerHTML += (`
+                <span>${list[i].name}</span>
+            `)
+        }
+
+        var one = document.querySelector('.one')
+        var two = document.querySelector('.two')
+
+        function ones() {
+            let dan = Math.floor(Math.random() * list.length)
+            one.innerHTML = list[dan].name
+            two.innerHTML = ''
+        }
+
+        function twos() {
+            let dan = Math.floor(Math.random() * list.length)
+            let shuang = Math.floor(Math.random() * list.length)
+            one.innerHTML = list[dan].name
+            two.innerHTML = list[shuang].name
+        }
+    </script>
+</body>
+
+</html>

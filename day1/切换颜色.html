@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 50px;
+            background-color: pink;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1" onclick="change1()"></div>
+    <div class="box2" onclick="change2()"></div>
+    <div class="box3" onclick="change3()"></div>
+</body>
+
+<script>
+    var box1=document.querySelector(".box1")
+    var flag1=ture
+    function change1(){
+        if(flag1){
+            box1.style.backgroundColor="red"
+            flag1=false
+        }else{
+            box1.style.backgroundColor="pink"
+            flag1=true
+        }
+        
+    }
+</script>
+</html>

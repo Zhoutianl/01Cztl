@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+    // 普通对象
+    let obj={
+        name:"小绿",
+        title:"211"
+    }
+
+    // map对象
+    const map=new Map([
+        ['name','小红'],
+        ['title','985'],
+        ['sex','女'],
+        ['age','18'],
+    ])
+
+    // map对象添加元素
+    map.set('msg','太好看')
+
+    // map对象删除属性
+    map.delete('sex')
+
+    console.log(map);
+
+    // map对象长度
+    console.log(map.size);
+    // 获取map对象
+    console.log(map.get('name'));
+    // 判断map对象元素是否存在
+    console.log(map.has('sex'));
+
+
+    const array=[1,2,3,4,4,4,5,6,7,8]
+    let arraya=new Set([1,2,3,1,2,3,4,5,6])
+    console.log(arraya,'arraya');
+</script>
+</html>
